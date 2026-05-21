@@ -1,4 +1,4 @@
-const prisma = require('../../config/prisma');
+const prisma = require("../../config/prisma");
 
 const createProduct = async (payload) => {
   const result = await prisma.product.create({

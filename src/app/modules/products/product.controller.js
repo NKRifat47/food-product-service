@@ -1,4 +1,4 @@
-const productService = require('./product.service');
+const productService = require("./product.service");
 
 const createProduct = async (req, res) => {
   try {
@@ -6,7 +6,7 @@ const createProduct = async (req, res) => {
 
     res.status(201).json({
       success: true,
-      message: 'Product created successfully',
+      message: "Product created successfully",
       data: result,
     });
   } catch (error) {
@@ -23,7 +23,7 @@ const getAllProducts = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: 'Products fetched successfully',
+      message: "Products fetched successfully",
       data: result,
     });
   } catch (error) {

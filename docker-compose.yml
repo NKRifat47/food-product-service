@@ -9,7 +9,8 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
-    command: sh -c "npx prisma migrate deploy && npm run dev"
+      - ../food-common-package:/food-common-package
+    command: sh -c "npm install && npm install /food-common-package && npx prisma migrate deploy && npm run dev"
     depends_on:
       - product-db
     networks:
